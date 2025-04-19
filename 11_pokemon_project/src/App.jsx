@@ -25,16 +25,16 @@ function App() {
     if (allPokemon.length == 0) return;
 
     const pokeNumber = Math.floor(Math.random() * 1025);
-    console.log(pokeNumber);
+    //console.log(pokeNumber);
 
     let name = allPokemon[pokeNumber];
-    console.log(name);
+    //console.log(name);
 
     if (!name) return;
     name = name.name;
     setRandomPoke(name);
-    setPokeImage(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeNumber+1}.png`)
-    console.log(name);
+    setPokeImage(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeNumber + 1}.png`)
+    //console.log(name);
     return name;
   }
 
@@ -52,19 +52,19 @@ function App() {
               type="submit"
               className='border border-none px-6 py-4 rounded-md bg-blue-600 text-white text-3xl'
               onClick={getPokemonName}
-            >Fet Random Pokemon </button>
+            >Fetch Random Pokemon </button>
           </div>
 
           <div className='flex justify-center mt-6  p-1 text-3xl text-gray-950 '>
-              {randomPoke && randomPoke.toUpperCase()}
+            {randomPoke && randomPoke.toUpperCase()}
           </div>
 
           <div className='flex justify-center items-center mt-16'>
             {/* <img src={pokeImage} alt={"Error in Image"} /> */}
-            {pokeImage && <img 
-            src={pokeImage} 
-            alt={randomPoke}
-            className="w-48 h-48 scale-150"
+            {pokeImage && <img
+              src={pokeImage}
+              alt={randomPoke}
+              className="w-48 h-48 scale-150"
             />}
           </div>
 
